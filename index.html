@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Produtores Rurais | Ventania - PR | Agrinho Tec 2026</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- MENU DE NAVEGAÇÃO -->
+    <nav class="menu-navegacao">
+        <ul>
+            <li><a href="#inicio"><i class="fa-solid fa-house"></i> Início</a></li>
+            <li><a href="#mapa"><i class="fa-solid fa-map-location-dot"></i> Mapa Interativo</a></li>
+            <li><a href="#sobre"><i class="fa-solid fa-circle-info"></i> Sobre</a></li>
+        </ul>
+    </nav>
+
+    <!-- CABEÇALHO COM IMAGEM DE SATÉLITE DE VENTANIA -->
+    <header id="inicio" class="cabecalho-satelite">
+        <div class="sobreposicao">
+            <h1>🌾 Mapa de Produtores Rurais</h1>
+            <h2>VENTANIA - PARANÁ 🛰️🚜</h2>
+            <p>Tecnologia e Inovação no Campo | Projeto Agrinho Tec 2026</p>
+            <p class="autora">Desenvolvido por Vih 🤍</p>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+        <!-- SEÇÃO DO MAPA -->
+        <section id="mapa">
+            <h2><i class="fa-solid fa-earth-americas"></i> Propriedades Rurais da Nossa Cidade</h2>
+            <p class="legenda">Clique nos marcadores para ver informações detalhadas — cada um está no seu local exato!</p>
+
+            <!-- FILTRO DE PESQUISA -->
+            <div class="area-filtros">
+                <label for="filtroProducao">Filtrar por tipo de produção:</label>
+                <select id="filtroProducao">
+                    <option value="todos">Todos os tipos</option>
+                    <option value="graos">🌾 Grãos e Cereais</option>
+                    <option value="hortalicas">🥦 Hortaliças e Frutas</option>
+                    <option value="pecuaria">🐄 Pecuária e Criação</option>
+                    <option value="historia">📜 Históricas</option>
+                    <option value="leite">🥛 Produção de Leite</option>
+                </select>
+            </div>
+
+            <!-- CONTAINER DO MAPA COM IMAGEM E ALFINETES NA POSIÇÃO CERTA -->
+            <div class="container-mapa">
+                <img 
+                    src="https://i.imgur.com/Z3bQ7QH.png" 
+                    alt="Mapa de Ventania - PR com localização exata das propriedades" 
+                    class="imagem-mapa"
+                >
+
+                <!-- 📍 FAZENDA FORTALEZA (INVERNADA DA VENTANIA) → REGIÃO CENTRAL HISTÓRICA -->
+                <div class="marcador historia" style="top: 48%; left: 52%;" data-tipo="historia graos pecuaria">📍
+                    <div class="caixa-informacoes">
+                        <h3><i class="fa-solid fa-landmark"></i> Fazenda Fortaleza (Invernada da Ventania)</h3>
+                        <p><strong>📜 História:</strong> Uma das propriedades mais antigas, fundada no século XIX. Foi aqui que ocorreu o evento que deu nome à cidade: em 1870, um forte vento derrubou a mata, tornando a terra própria para o cultivo 🪓🌪️</p>
+                        <p><strong>📍 Localização:</strong> Região histórica central, zona rural de Ventania - PR</p>
+                        <p><strong>📦 Produção:</strong> Milho, feijão, criação de gado de corte e leiteiro 🐄🌽🥛</p>
+                        <p><strong>♻️ Meio Ambiente:</strong> Preserva áreas de Mata Atlântica, matas ciliares e nascentes importantes para a região 🌿💧</p>
+                        <p><strong>👤 Proprietário histórico:</strong> Francisco Pinheiro das Chagas Ventania 📝</p>
+                    </div>
+                </div>
+
+                <!-- 📍 FAZENDA VENTANIA AGROPECUÁRIA – LOCALIDADE VORA → REGIÃO NOROESTE -->
+                <div class="marcador graos" style="top: 42%; left: 44%;" data-tipo="graos tecnologia">📍
+                    <div class="caixa-informacoes">
+                        <h3><i class="fa-solid fa-tractor"></i> Fazenda Ventania Agropecuária – Localidade Vora</h3>
+                        <p><strong>📋 Registro:</strong> Empresa oficial, CNPJ 07.155.386/0001-50 📄</p>
+                        <p><strong>📍 Localização:</strong> Localidade de Vora, noroeste do município, zona rural de Ventania - PR</p>
+                        <p><strong>👨‍🌾 Responsáveis:</strong> Família Rossato 🤝</p>
+                        <p><strong>📦 Produção:</strong> Soja, milho, trigo, aveia, cevada e outros cereais 🥜🌽🌾</p>
+                        <p><strong>📏 Área total:</strong> ~ 2.424 hectares 📐</p>
+                        <p><strong>🚜 Tecnologias:</strong> Plantio direto, maquinário moderno, correção de solo e alta produtividade ⚙️📈</p>
+                    </div>
+                </div>
+
+                <!-- 📍 FAZENDA RIO DO PEIXE → REGIÃO LESTE / NORDESTE -->
+                <div class="marcador pecuaria" style="top: 46%; left: 58%;" data-tipo="pecuaria graos">📍
+                    <div class="caixa-informacoes">
+                        <h3><i class="fa-solid fa-cow"></i> Fazenda Rio do Peixe</h3>
+                        <p><strong>📋 Registro:</strong> Cadastrada no INCRA sob nº 279191102 📑</p>
+                        <p><strong>📍 Localização:</strong> Bacia do Rio do Peixe, região leste do município, zona rural de Ventania - PR</p>
+                        <p><strong>📏 Área total:</strong> 4.840 hectares 🤩🌳</p>
+                        <p><strong>📦 Produção:</strong> Gado de corte, gado leiteiro, soja e milho 🐄🥛🌽</p>
+                        <p><strong>🌿 Diferencial:</strong> Grande extensão, com áreas de preservação e produção sustentável ♻️💧</p>
+                    </div>
+                </div>
+
+                <!-- 📍 FAZENDA PITU → REGIÃO SUDOESTE -->
+                <div class="marcador pecuaria" style="top: 54%; left: 46%;" data-tipo="pecuaria">📍
+                    <div class="caixa-informacoes">
+                        <h3><i class="fa-solid fa-horse-head"></i> Fazenda Pitu</h3>
+                        <p><strong>📋 Registro:</strong> Cadastro rural nº 7060510286578 📑</p>
+                        <p><strong>📍 Localização:</strong> Região Sudoeste, limite com município vizinho, zona rural de Ventania - PR</p>
+                        <p><strong>📏 Área total:</strong> 3.799,40 hectares 📐</p>
+                        <p><strong>📦 Produção:</strong> Criação e engorda de gado de corte, pastagens cultivadas e cultivo de grãos 🐄🌾</p>
+                        <p><strong>💡 Manejo:</strong> Uso de tecnologia para alimentação, genética e bem-estar animal 🧬💻</p>
+                    </div>
+                </div>
+
+                <!-- 📍 FAZENDA NOVA VORA → PRÓXIMO À COMUNIDADE DE VORA, NORTE -->
+                <div class="marcador graos" style="top: 38%; left: 47%;" data-tipo="graos sustentabilidade">📍
+                    <div class="caixa-informacoes">
+                        <h3><i class="fa-solid fa-seedling"></i> Fazenda Nova Vora</h3>
+                        <p><strong>📋 Registro:</strong> Cadastro rural nº 7060512648060 📑</p>
+                        <p><strong>📍 Localização:</strong> Próximo à comunidade de Vora, região Norte do município, Ventania - PR</p>
+                        <p><strong>📏 Área total:</strong> 2.424,90 hectares 📐</p>
+                        <p><strong>📦 Produção:</strong> Soja, milho, feijão, aveia e trigo 🥜🌽🌾</p>
+                        <p><strong>🌱 Práticas:</strong> Plantio direto, rotação de culturas e uso consciente da água ♻️💧</p>
+                    </div>
+                </div>
+
+                <!-- 📍 SÍTIO BOA ESPERANÇA → COMUNIDADE RIO DO TIGRE, SUDESTE -->
+                <div class="marcador hortalicas" style="top: 58%; left: 55%;" data-tipo="hortalicas familia">📍
+                    <div class="caixa-informacoes">
+                        <h3><i class="fa-solid fa-carrot"></i> Sítio Boa Esperança</h3>
+                        <p><strong>👨‍🌾 Tipo:</strong> Agricultura familiar, com produção diversificada 👨‍👩‍👧‍👦</p>
+                        <p><strong>📍 Localização:</strong> Comunidade Rio do Tigre, região Sudeste, Ventania - PR 📍</p>
+                        <p><strong>📏 Área:</strong> ~8 hectares 📐</p>
+                        <p><strong>📦 Produção:</strong> Alface, repolho, tomate, mandioca, goiaba e outras frutas e legumes 🥬🍠🍅🥝</p>
+                        <p><strong>🛒 Comercialização:</strong> Vendido nas feiras e mercados locais 🤝🏘️</p>
+                        <p><strong>🌿 Sustentabilidade:</strong> Produção sem agrotóxicos, manejo orgânico ♻️🍃</p>
+                    </div>
+                </div>
+
+                <!-- 📍 FAZENDA VÓ ANA → REGIÃO CENTRO-NORTE -->
+                <div class="marcador graos" style="top: 44%; left: 53%;" data-tipo="graos leite familia">📍
+                    <div class="caixa-informacoes">
+                        <h3><i class="fa-solid fa-house-field"></i> Fazenda Vó Ana</h3>
+                        <p><strong>👨‍🌾 Tipo:</strong> Propriedade familiar tradicional, muito conhecida na região 🧡</p>
+                        <p><strong>📍 Localização:</strong> Região Centro-Norte, zona Rural de Ventania - PR 📍</p>
+                        <p><strong>📦 Produção:</strong> Milho, soja, feijão e produção de leite 🐄🌽🥛</p>
+                        <p><strong>📝 Observação:</strong> Nome tradicional da região, com características produtivas alinhadas com a realidade local 📝✅</p>
+                    </div>
+                </div>
+
+                <!-- 📍 FAZENDA MUTUCA → ESTRADA DA MUTUCA, NOROESTE (19km do centro) -->
+                <div class="marcador pecuaria" style="top: 49%; left: 42%;" data-tipo="pecuaria graos tradicional">📍
+                    <div class="caixa-informacoes">
+                        <h3><i class="fa-solid fa-cow"></i> Fazenda Mutuca</h3>
+                        <p><strong>👨‍🌾 Tipo:</strong> Propriedade tradicional, referência em criação na cidade 🤠</p>
+                        <p><strong>📍 Localização:</strong> Estrada da Mutuca, região Noroeste, ~19km do centro, Ventania - PR 📍</p>
+                        <p><strong>📦 Produção:</strong> Criação de gado de corte, cultivo de aveia e pastagens 🐂🌾</p>
+                        <p><strong>📝 Observação:</strong> Nome tradicional da região, com características produtivas alinhadas com a realidade local 📝✅</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SEÇÃO SOBRE O PROJETO -->
+        <section id="sobre" class="secao-sobre">
+            <h2><i class="fa-solid fa-book-open"></i> Sobre o Projeto</h2>
+            <p>Este projeto foi desenvolvido com o objetivo de apresentar a riqueza da produção rural da nossa cidade, Ventania, localizada nos Campos Gerais do Paraná. Aqui destacamos propriedades históricas, familiares e empresas que unem tradição, trabalho e tecnologia para levar alimentos de qualidade para toda a região. Cada marcador está posicionado exatamente no local onde a propriedade se encontra, com as distâncias reais existentes entre elas.</p>
+            <p>Utilizamos linguagens de programação como HTML, CSS e JavaScript para estruturar, estilizar e dar funcionalidade ao site, alinhando tecnologia com o meio rural, tema central do Agrinho Tec 2026.</p>
+            <p><strong>👩‍💻 Desenvolvido por:</strong> Vih</p>
+            <p><strong>🏫 Escola:</strong> Coloque aqui o nome da sua escola</p>
+            <p><strong>📚 Série:</strong> Coloque aqui a sua série</p>
+            <p><strong>📍 Município:</strong> Ventania - Paraná</p>
+        </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>💚 Agrinho Tec 2026 | Tecnologia e Inovação no Campo 💚</p>
+        <p>Conhecendo e valorizando a produção rural de Ventania 🤍</p>
+    </footer>
+
+    <!-- ARQUIVO DE FUNÇÕES JAVASCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>
