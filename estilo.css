@@ -1,0 +1,252 @@
+/* RESET E CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* PALETA DE CORES - TONS QUE REPRESENTAM O PARANÁ E O CAMPO */
+:root {
+    --verde-principal: #2D6A4F;
+    --verde-claro: #40916C;
+    --verde-suave: #D8F3DC;
+    --azul-parana: #0A3161;
+    --cor-fundo: #F6F1DE;
+    --texto-escuro: #1B4332;
+    --destaque: #1A759F;
+    --cor-graos: #FFB703;
+    --cor-hortalicas: #38B000;
+    --cor-pecuaria: #0077B6;
+    --cor-leite: #F15BB5;
+    --cor-historia: #9D4EDD;
+}
+
+/* ESTILO DO CORPO DA PÁGINA */
+body {
+    background-color: var(--cor-fundo);
+    color: var(--texto-escuro);
+    line-height: 1.6;
+}
+
+/* MENU DE NAVEGAÇÃO */
+.menu-navegacao {
+    background-color: var(--verde-principal);
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.menu-navegacao ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.menu-navegacao a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.menu-navegacao a:hover {
+    color: var(--verde-suave);
+}
+
+/* CABEÇALHO COM IMAGEM DE SATÉLITE DE VENTANIA */
+.cabecalho-satelite {
+    background-image: url('https://i.imgur.com/5tG8kL9.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.sobreposicao {
+    background-color: rgba(0, 0, 0, 0.55);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.cabecalho-satelite h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.cabecalho-satelite h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #FFD700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.autora {
+    font-style: italic;
+    opacity: 0.95;
+    margin-top: 8px;
+    font-size: 18px;
+}
+
+/* CONTEÚDO PRINCIPAL */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+#mapa h2, .secao-sobre h2 {
+    text-align: center;
+    color: var(--verde-principal);
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.legenda {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 16px;
+    color: var(--texto-escuro);
+}
+
+/* ÁREA DE FILTROS */
+.area-filtros {
+    background-color: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.area-filtros select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+/* CONTAINER DO MAPA - AJUSTADO E COM IMAGEM GARANTIDA */
+.container-mapa {
+    position: relative;
+    margin: 20px auto;
+    width: 95%;
+    max-width: 800px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    min-height: 500px;
+}
+
+.imagem-mapa {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* MARCADORES / ALFINETES - ESTILO BONITO E ANIMAÇÃO */
+.marcador {
+    position: absolute;
+    font-size: 32px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.6));
+    z-index: 10;
+}
+
+.marcador:hover {
+    transform: scale(1.3);
+}
+
+.graos { color: var(--cor-graos); }
+.hortalicas { color: var(--cor-hortalicas); }
+.pecuaria { color: var(--cor-pecuaria); }
+.leite { color: var(--cor-leite); }
+.historia { color: var(--cor-historia); }
+
+/* CAIXA DE INFORMAÇÕES */
+.caixa-informacoes {
+    display: none;
+    position: absolute;
+    bottom: 35px;
+    left: 25px;
+    background: white;
+    border: 2px solid var(--verde-claro);
+    border-radius: 12px;
+    padding: 15px;
+    width: 320px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    font-size: 14px;
+    z-index: 500;
+    animation: aparecer 0.4s ease;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.caixa-informacoes h3 {
+    color: var(--verde-principal);
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.caixa-informacoes p {
+    margin-bottom: 5px;
+}
+
+/* SEÇÃO SOBRE */
+.secao-sobre {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin-top: 40px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+/* RODAPÉ */
+footer {
+    background-color: var(--texto-escuro);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* RESPONSIVIDADE PARA CELULARES */
+@media (max-width: 768px) {
+    .caixa-informacoes {
+        width: 250px;
+        font-size: 13px;
+    }
+    .cabecalho-satelite h1 {
+        font-size: 26px;
+    }
+    .cabecalho-satelite h2 {
+        font-size: 20px;
+    }
+}
